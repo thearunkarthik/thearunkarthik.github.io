@@ -1,916 +1,572 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun Karthik | Full Stack Engineer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arun Karthik N — Product Designer &amp; Front-end Engineer</title>
+<link rel="shortcut icon" href="images/fav-icon.png" type="image/x-icon">
+<meta name="description" content="Arun Karthik N — product designer and front-end engineer in Chennai. Enterprise and IIoT products: UX flows, design systems, and the Angular, React and TypeScript interfaces that ship them.">
+<meta name="author" content="Arun Karthik N">
+<link rel="canonical" href="https://thearunkarthik.github.io/">
 
-    <link rel="shortcut icon" href="image/AK-favicon.png" type="image/x-icon">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arun Karthik N — Product Designer &amp; Front-end Engineer">
+<meta property="og:description" content="Enterprise and IIoT product design, shipped to production. Chennai, India.">
+<meta property="og:image" content="images/portrait-cutout.png">
+<meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Fonts: Outfit for headings, Poppins for body text -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Custom Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                        display: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        zinc: {
-                            850: '#202022',
-                            900: '#18181b',
-                            950: '#09090b',
-                        },
-                        // Adjusted to darker reds as requested
-                        red: {
-                            500: '#ef4444',
-                            600: '#dc2626', // Base Red
-                            700: '#b91c1c', // Dark Hover Red
-                            800: '#991b1b',
-                            900: '#7f1d1d',
-                        }
-                    },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Style CSS link -->
-    <link rel="stylesheet" href="style.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="script.js" defer></script>
 </head>
+<body>
 
-<body class="antialiased selection:bg-red-700/30 selection:text-red-200">
+<div style="position: relative; background: var(--ak-bg); color: var(--ak-fg); font-family: var(--font-body); overflow-x: hidden;">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-panel border-b border-zinc-800" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0">
-                    <a href="#"
-                        class="font-display font-bold text-xl tracking-tight text-white flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
-                            <path fill="#dc2626"
-                                d="M.75 8S5 7 8 9c0 0 .5 3.75 2.5 3.75V11s.5 1 1.5 1s1.5-1 1.5-1v1.75C15.5 12.75 16 9 16 9c3-2 7.25-1 7.25-1c-2 1-2.25 4.5-2.25 4.5c-4 0-4 3.25-4 3.25c-5-1-5 2.75-5 2.75s0-3.75-5-2.75c0 0 0-3.25-4-3.25C3 12.5 2.75 9 .75 8" />
-                        </svg>
-                        <!-- <i data-lucide="cpu" class="w-6 h-6 text-red-600"></i> -->
-                        Arun Karthik<span class="text-red-600">.</span>
-                    </a>
-                </div>
+  <div style="position: absolute; top: -180px; left: 50%; width: min(1200px, 130vw); height: 760px; margin-left: min(-600px, -65vw); pointer-events: none; z-index: 0;">
+    <div style="position: absolute; top: 60px; left: 8%; width: 46%; height: 460px; border-radius: 999px; background: var(--ak-glow-a); filter: blur(90px); animation: drift 15s ease-in-out infinite;"></div>
+    <div style="position: absolute; top: 140px; right: 10%; width: 38%; height: 380px; border-radius: 999px; background: var(--ak-glow-b); filter: blur(100px); animation: drift 19s ease-in-out infinite reverse;"></div>
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(to right, var(--ak-line) 0 1px, transparent 1px 100%), linear-gradient(to bottom, var(--ak-line) 0 1px, transparent 1px 100%); background-size: 72px 72px; mask-image: radial-gradient(60% 60% at 50% 30%, #000 0%, transparent 78%); -webkit-mask-image: radial-gradient(60% 60% at 50% 30%, #000 0%, transparent 78%);"></div>
+  </div>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about"
-                            class="hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                        <a href="#expertise"
-                            class="hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Expertise</a>
-                        <a href="#experience"
-                            class="hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
-                        <a href="#projects"
-                            class="hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
-                        <a href="#contact"
-                            class="bg-red-600/10 text-red-600 border border-red-600/50 hover:bg-red-700 hover:text-white hover:border-red-700 hover:shadow-[0_0_15px_rgba(220,38,38,0.4)] px-4 py-2 rounded-full text-sm font-medium transition-all">Let's
-                            Talk</a>
-                    </div>
-                </div>
+  <div id="ak-cursor" style="position: fixed; top: 0; left: 0; width: 30px; height: 30px; border-radius: 999px; background: var(--ak-violet); pointer-events: none; z-index: 95; opacity: 0; transform: translate(-100px, -100px); mix-blend-mode: difference;"></div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-zinc-300 hover:text-white focus:outline-none">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-zinc-800 absolute w-full">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-                <a href="#about"
-                    class="hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">About</a>
-                <a href="#expertise"
-                    class="hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">Expertise</a>
-                <a href="#experience"
-                    class="hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">Experience</a>
-                <a href="#projects"
-                    class="hover:text-red-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">Projects</a>
-                <a href="#contact"
-                    class="text-red-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">Contact</a>
-            </div>
-        </div>
+  <header style="position: sticky; top: 0; z-index: 80; display: flex; justify-content: center; padding: 16px clamp(14px, 4vw, 40px) 8px; pointer-events: none;">
+    <nav id="ak-nav" style="display: flex; align-items: center; gap: 4px; padding: 7px; background: rgba(255,255,255,0.82); backdrop-filter: blur(16px); border: 1px solid var(--ak-line); border-radius: 999px; box-shadow: var(--ak-shadow); pointer-events: auto; max-width: 100%; overflow: auto hidden;">
+      <a href="#top" style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; transition: background .2s, color .2s;" class="h1">
+        <span style="width: 7px; height: 7px; border-radius: 999px; background: var(--ak-violet); animation: blip 2.4s ease-in-out infinite;"></span>
+        Arun
+      </a>
+      <span id="ak-nav-links" style="display: flex; align-items: center; gap: 2px;">
+      <a href="#work" style="padding: 8px 13px; border-radius: 999px; font-size: 13.5px; font-weight: 600; white-space: nowrap; color: var(--ak-mute); transition: background .2s, color .2s;" class="h2">Work</a>
+      <a href="#platforms" style="padding: 8px 13px; border-radius: 999px; font-size: 13.5px; font-weight: 600; white-space: nowrap; color: var(--ak-mute); transition: background .2s, color .2s;" class="h3">Sites</a>
+      <!-- <a href="#writing" style="padding: 8px 13px; border-radius: 999px; font-size: 13.5px; font-weight: 600; white-space: nowrap; color: var(--ak-mute); transition: background .2s, color .2s;" class="h4">Writing</a> -->
+      <a href="#about" style="padding: 8px 13px; border-radius: 999px; font-size: 13.5px; font-weight: 600; white-space: nowrap; color: var(--ak-mute); transition: background .2s, color .2s;" class="h5">About</a>
+      </span>
+      <button type="button" id="ak-burger" data-action="toggle-menu" aria-label="Menu" style="align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--ak-line); border-radius: 999px; background: var(--ak-chip); color: var(--ak-fg); cursor: pointer;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+      </button>
+      <!-- <a href="#contact" data-magnet="1" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; border-radius: 999px; background: var(--ak-violet); color: #fff; font-size: 13.5px; font-weight: 600; white-space: nowrap; transition: filter .2s;" class="h6">
+        Contact
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+      </a> -->
+      <a href="#contact" data-magnet="1" class="h6 desktop-contact" style="display:inline-flex; align-items:center; gap:7px; padding:9px 16px; border-radius:999px; background:var(--ak-violet); color:#fff; font-size:13.5px; font-weight:600; white-space:nowrap; transition:filter .2s;">
+  Contact
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 17 17 7"></path>
+    <path d="M8 7h9v9"></path>
+  </svg>
+</a>
     </nav>
+    <div id="ak-menu" data-action="close-menu" style="display: none; position: fixed; inset: 0; z-index: 90; background: rgba(23,22,26,0.42); backdrop-filter: blur(6px); pointer-events: auto;">
+      <div style="position: absolute; top: 74px; left: 14px; right: 14px; display: flex; flex-direction: column; padding: 10px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; box-shadow: var(--ak-shadow-lg);">
+        <a href="#work" style="padding: 15px 16px; border-radius: 14px; font-size: 16px; font-weight: 600;" class="h7">Work</a>
+        <a href="#platforms" style="padding: 15px 16px; border-radius: 14px; font-size: 16px; font-weight: 600;" class="h8">Sites</a>
+        <!-- <a href="#writing" style="padding: 15px 16px; border-radius: 14px; font-size: 16px; font-weight: 600;" class="h9">Writing</a> -->
+        <a href="#about" style="padding: 15px 16px; border-radius: 14px; font-size: 16px; font-weight: 600;" class="h10">About</a>
+        <a href="#contact" style="margin-top: 6px; padding: 15px 16px; border-radius: 14px; background: var(--ak-violet); color: #fff; font-size: 16px; font-weight: 600; text-align: center;" class="h11">Contact</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-12 overflow-hidden bg-grid-pattern">
-        <!-- Abstract glowing orbs -->
-        <div
-            class="absolute top-1/4 left-1/4 w-72 h-72 bg-red-700/20 rounded-full mix-blend-screen filter blur-3xl animate-blob">
+  <section id="top" data-smoke-host="1" style="position: relative; z-index: 1; isolation: isolate; max-width: 1120px; margin: 0 auto; padding: clamp(30px, 6vw, 76px) clamp(20px, 5vw, 40px) clamp(26px, 4vw, 52px);">
+    <div id="ak-smoke" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0; transition: opacity .5s ease; mix-blend-mode: plus-lighter;">
+      <div id="ak-smoke-a" style="position: absolute; top: 0; left: 0; width: 520px; height: 520px; margin: -260px 0 0 -260px; border-radius: 999px; background: radial-gradient(circle, rgba(140,105,255,0.55) 0%, rgba(140,105,255,0.22) 38%, rgba(140,105,255,0) 70%); filter: blur(42px);"></div>
+      <div id="ak-smoke-b" style="position: absolute; top: 0; left: 0; width: 300px; height: 300px; margin: -150px 0 0 -150px; border-radius: 999px; background: radial-gradient(circle, rgba(196,176,255,0.5) 0%, rgba(150,110,255,0.18) 45%, rgba(150,110,255,0) 72%); filter: blur(26px);"></div>
+    </div>
+    <div style="position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(28px, 5vw, 60px); align-items: center;">
+      <div>
+        <div data-reveal="1" style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px 7px 11px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap; box-shadow: var(--ak-shadow);">
+          <span style="width: 7px; height: 7px; border-radius: 999px; background: var(--ak-violet); animation: blip 2.4s ease-in-out infinite;"></span>
+          Available for product design roles
         </div>
-        <div
-            class="absolute top-1/3 right-1/4 w-72 h-72 bg-red-900/20 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000">
+        <h1 id="ak-scatter" style="margin: 20px 0 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(40px, 6.8vw, 76px); line-height: 0.98; letter-spacing: -0.05em; user-select: none; cursor: default;">
+          <span style="display: block;"><span style="display: inline-block; white-space: nowrap;"><span data-ch="1" style="display: inline-block; will-change: transform;">P</span><span data-ch="1" style="display: inline-block; will-change: transform;">r</span><span data-ch="1" style="display: inline-block; will-change: transform;">o</span><span data-ch="1" style="display: inline-block; will-change: transform;">d</span><span data-ch="1" style="display: inline-block; will-change: transform;">u</span><span data-ch="1" style="display: inline-block; will-change: transform;">c</span><span data-ch="1" style="display: inline-block; will-change: transform;">t</span></span><span style="display: inline-block; width: 0.28em;"></span><span style="display: inline-block; white-space: nowrap;"><span data-ch="1" style="display: inline-block; will-change: transform;">d</span><span data-ch="1" style="display: inline-block; will-change: transform;">e</span><span data-ch="1" style="display: inline-block; will-change: transform;">s</span><span data-ch="1" style="display: inline-block; will-change: transform;">i</span><span data-ch="1" style="display: inline-block; will-change: transform;">g</span><span data-ch="1" style="display: inline-block; will-change: transform;">n</span><span data-ch="1" style="display: inline-block; will-change: transform;">e</span><span data-ch="1" style="display: inline-block; will-change: transform;">r</span></span></span>
+          <span style="display: block;"><span style="font-weight: 300; color: var(--ak-faint);">&</span><span style="display: inline-block; width: 0.2em;"></span><span style="display: inline-block; white-space: nowrap; color: var(--ak-violet);"><span data-ch="1" style="display: inline-block; will-change: transform;">f</span><span data-ch="1" style="display: inline-block; will-change: transform;">r</span><span data-ch="1" style="display: inline-block; will-change: transform;">o</span><span data-ch="1" style="display: inline-block; will-change: transform;">n</span><span data-ch="1" style="display: inline-block; will-change: transform;">t</span><span data-ch="1" style="display: inline-block; will-change: transform;">-</span><span data-ch="1" style="display: inline-block; will-change: transform;">e</span><span data-ch="1" style="display: inline-block; will-change: transform;">n</span><span data-ch="1" style="display: inline-block; will-change: transform;">d</span></span><span style="display: inline-block; width: 0.28em;"></span><span style="display: inline-block; white-space: nowrap;"><span data-ch="1" style="display: inline-block; will-change: transform;">e</span><span data-ch="1" style="display: inline-block; will-change: transform;">n</span><span data-ch="1" style="display: inline-block; will-change: transform;">g</span><span data-ch="1" style="display: inline-block; will-change: transform;">i</span><span data-ch="1" style="display: inline-block; will-change: transform;">n</span><span data-ch="1" style="display: inline-block; will-change: transform;">e</span><span data-ch="1" style="display: inline-block; will-change: transform;">e</span><span data-ch="1" style="display: inline-block; will-change: transform;">r</span></span></span>
+        </h1>
+        <p data-reveal="1" style="margin: 20px 0 0; max-width: 46ch; font-size: clamp(15.5px, 1.4vw, 18px); line-height: 1.6; color: var(--ak-mute);">Three years designing enterprise and IIoT products — and building the Angular, React and TypeScript interfaces that ship them. I own the whole line: requirements, flows, design system, production front end, deployment.</p>
+        <div data-reveal="1" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;">
+          <!-- <a href="#contact" data-magnet="1" style="display: inline-flex; align-items: center; gap: 9px; padding: 14px 22px; border-radius: 999px; background: var(--ak-violet); color: #fff; font-size: 14px; font-weight: 600; transition: filter .2s;" class="h12">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            Get in touch
+          </a> -->
+           <a href="#platforms" data-magnet="1" style="display: inline-flex; align-items: center; gap: 9px; padding: 14px 22px; border-radius: 999px; background: var(--ak-violet); color: #fff; font-size: 14px; font-weight: 600; transition: filter .2s;" class="h12">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+            Explore my works
+          </a>
+          <a href="doc/ArunkarthikProductDesignerCV.pdf" download="ArunkarthikProductDesignerCV.pdf" target="_blank" data-magnet="1" style="display: inline-flex; align-items: center; gap: 9px; padding: 14px 22px; border-radius: 999px; background: var(--ak-card); border: 1px solid var(--ak-line-2); color: var(--ak-fg); font-size: 14px; font-weight: 600; transition: background .2s, color .2s;" class="h13">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
+            Download CV
+          </a>
         </div>
-
-        <div
-            class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 w-full">
-
-            <!-- Hero Text Content (Left on Desktop, Top on Mobile) -->
-            <div class="text-center lg:text-left flex-1 flex flex-col items-center lg:items-start w-full">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/50 text-xs sm:text-sm font-medium text-zinc-300 mb-8 reveal hover:border-red-600/30 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all">
-                    <span class="w-2 h-2 rounded-full bg-green-600 animate-pulse"></span>
-                    Available for new opportunities
-                </div>
-
-                <h1
-                    class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight reveal">
-                    From Devices to Dashboards <br class="hidden xl:block" />
-                    <span class="text-gradient">End-to-End Product Engineering</span>
-                </h1>
-
-                <p
-                    class="mt-4 text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl font-light leading-relaxed reveal">
-                    Full Stack Engineer & IoT Solutions Architect. I build scalable end-to-end IoT ecosystems, real-time
-                    dashboards, and robust web platforms that drive industrial efficiency.
-                </p>
-
-                <div
-                    class="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start reveal">
-                    <a href="#projects"
-                        class="px-8 py-4 rounded-full bg-red-600 text-white font-semibold hover:bg-red-700 hover:shadow-[0_0_20px_rgba(220,38,38,0.5)] transition-all flex items-center justify-center gap-2 group w-full sm:w-auto">
-                        Explore My Work
-                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                    <a href="doc/ArunkarthikFullStackEngineerCV.pdf" download="ArunkarthikFullStackEngineerCV.pdf" target="_blank"
-                        class="px-8 py-4 rounded-full bg-zinc-900 text-white font-semibold border border-zinc-800 hover:bg-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto">
-                        <i data-lucide="download" class="w-4 h-4 text-red-600"></i>
-                        Download resume
-                    </a>
-                </div>
-
-                <div
-                    class="mt-12 flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 opacity-70 text-xs sm:text-sm reveal">
-                    <span class="flex items-center gap-2"><i data-lucide="check-circle-2"
-                            class="w-4 h-4 text-red-600"></i> IoT Platforms</span>
-                    <span class="flex items-center gap-2"><i data-lucide="check-circle-2"
-                            class="w-4 h-4 text-red-600"></i> Real-Time Systems</span>
-                    <span class="flex items-center gap-2"><i data-lucide="check-circle-2"
-                            class="w-4 h-4 text-red-600"></i> UI/UX + DevOps</span>
-                </div>
-            </div>
-
-            <!-- Hero Image Content (Right on Desktop, Bottom on Mobile) -->
-            <div class="flex-shrink-0 reveal mt-8 lg:mt-0 lg:ml-8 w-full lg:w-auto flex justify-center">
-                <div
-                    class="relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[420px] lg:w-[380px] lg:h-[500px] group mx-auto">
-                    <!-- Glow behind image -->
-                    <div
-                        class="absolute -inset-2 bg-red-600/20 rounded-3xl blur-2xl group-hover:bg-red-600/40 transition-all duration-700">
-                    </div>
-
-                    <!-- Image Wrapper -->
-                    <!-- USER INSTRUCTION: Replace the 'src' attribute below with your actual image path -->
-                    <div
-                        class="relative w-full h-full rounded-3xl overflow-hidden border-4 border-zinc-800 group-hover:border-red-600 transition-colors duration-500 z-10 bg-zinc-900 shadow-2xl">
-                        <img src="image/image-1.jpg" alt="Arun Karthik"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out">
-                    </div>
-                </div>
-            </div>
-
+        <div id="ak-hero-stats" style="display: flex; flex-wrap: wrap; gap: 26px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--ak-line);">
+          <div data-reveal="1">
+            <div class="ak-stat-num" style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.035em;">3<span style="color: var(--ak-violet);">+</span></div>
+            <div class="ak-stat-lbl" style="font-size: 12.5px; color: var(--ak-faint); margin-top: 2px;">Years shipping</div>
+          </div>
+          <div data-reveal="1">
+            <div class="ak-stat-num" style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.035em;">11<span style="color: var(--ak-violet);">+</span></div>
+            <div class="ak-stat-lbl" style="font-size: 12.5px; color: var(--ak-faint); margin-top: 2px;">Live websites</div>
+          </div>
+          <div data-reveal="1">
+            <div class="ak-stat-num" style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.035em;">2</div>
+            <div class="ak-stat-lbl" style="font-size: 12.5px; color: var(--ak-faint); margin-top: 2px;">Sides design + code</div>
+          </div>
         </div>
+      </div>
 
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce opacity-50 hidden md:block">
-            <i data-lucide="chevron-down" class="w-6 h-6 text-red-600"></i>
+      <div id="ak-portrait-wrap" data-reveal="1" style="position: relative; align-self: stretch; justify-self: center; display: flex; flex-direction: column; justify-content: flex-end; width: 100%; max-width: 480px;">
+        <div style="position: relative;">
+          <div style="position: absolute; inset: 8% 0 4%; border-radius: 999px; background: radial-gradient(circle at 50% 48%, var(--ak-glow-a) 0%, var(--ak-violet-soft) 42%, transparent 74%); filter: blur(30px); pointer-events: none;"></div>
+          <img src="images/portrait-cutout.png" alt="Arun Karthik N" style="position: relative; display: block; width: 100%; filter: drop-shadow(0 20px 38px rgba(23,22,26,0.2)); transition: transform .6s ease;" class="h14">
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 md:py-24 relative border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="reveal">
-                    <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-6">The Architect’s Narrative
-                    </h2>
-                    <div class="w-20 h-1 bg-red-600 mb-8 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.6)]"></div>
-
-                    <div class="space-y-6 text-zinc-300 leading-relaxed text-base md:text-lg">
-                        <p>
-                            I don’t just build technology; I build solutions that solve real-world industrial friction.
-                            With a foundation at <span class="text-red-500 font-semibold">Niraltek Solutions</span>, I
-                            have spent my career at the intersection of hardware and software, developing smart
-                            ecosystems for Energy, Cold Storage, and Air Quality monitoring.
-                        </p>
-                        <p>
-                            My approach is three-dimensional: I possess the <strong
-                                class="text-white font-medium">technical depth</strong> to engineer IoT gateways and
-                            CI/CD pipelines, the <strong class="text-white font-medium">product intuition</strong> to
-                            design intuitive user interfaces, and the <strong class="text-white font-medium">strategic
-                                mindset</strong> to lead digital presence that captures markets.
-                        </p>
-                        <p>
-                            Whether it’s deploying a 4G IoT Gateway or optimizing a global web architecture, I focus on
-                            scalability, reliability, and impact. I am a builder who thrives in the "zero-to-one" phase
-                            of product development.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative reveal group">
-                    <div
-                        class="glass-panel p-6 md:p-8 rounded-2xl border border-zinc-800 relative z-10 transition-all duration-300 group-hover:border-red-600/30 group-hover:shadow-[0_0_30px_rgba(220,38,38,0.15)]">
-                        <h3 class="font-display text-xl text-white mb-6 flex items-center gap-2">
-                            <i data-lucide="zap" class="text-red-600"></i> The Engineering Mindset
-                        </h3>
-                        <ul class="space-y-6">
-                            <li class="flex gap-4 items-start">
-                                <div class="mt-1 p-2 bg-zinc-900 rounded-lg text-red-600 border border-zinc-800"><i
-                                        data-lucide="target" class="w-5 h-5"></i></div>
-                                <div>
-                                    <h4 class="text-white font-medium">Ambitious & Goal-Oriented</h4>
-                                    <p class="text-sm text-zinc-400 mt-1">Focused on delivering measurable business
-                                        impact through technical execution.</p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4 items-start">
-                                <div class="mt-1 p-2 bg-zinc-900 rounded-lg text-red-600 border border-zinc-800"><i
-                                        data-lucide="refresh-cw" class="w-5 h-5"></i></div>
-                                <div>
-                                    <h4 class="text-white font-medium">Quick Learner & Adaptive</h4>
-                                    <p class="text-sm text-zinc-400 mt-1">Highly capable of absorbing new tech stacks in
-                                        startup-paced environments.</p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4 items-start">
-                                <div class="mt-1 p-2 bg-zinc-900 rounded-lg text-red-600 border border-zinc-800"><i
-                                        data-lucide="wrench" class="w-5 h-5"></i></div>
-                                <div>
-                                    <h4 class="text-white font-medium">Analytical Problem-Solver</h4>
-                                    <p class="text-sm text-zinc-400 mt-1">Strong troubleshooting skills for complex,
-                                        real-world hardware/software challenges.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Decorative element behind -->
-                    <div
-                        class="absolute -inset-4 bg-gradient-to-r from-red-700/20 to-red-900/10 blur-xl rounded-3xl -z-10 transition-opacity duration-300 group-hover:opacity-100 opacity-50">
-                    </div>
-                </div>
-            </div>
+        <div style="position: absolute; left: 0; bottom: 2px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap; box-shadow: var(--ak-shadow);">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ak-violet);"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Chennai, India
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Core Expertise Section -->
-    <section id="expertise" class="py-20 md:py-24 bg-zinc-950/50 border-y border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16 reveal">
-                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Core Expertise</h2>
-                <p class="text-zinc-400 max-w-2xl mx-auto text-sm md:text-base">Bridging the gap between physical
-                    sensors, scalable backend logic, and user-centric interfaces.</p>
+  <section style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 40px);">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; padding: 18px 22px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 20px;">
+      <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ak-faint);">Stack</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">Figma</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">Angular</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">React</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">TypeScript</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">RxJS</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">Node.js</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">WebSockets</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">WordPress</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">Docker</span>
+        <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">AWS EC2</span>
+      </span>
+    </div>
+  </section>
+
+  <section id="work" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: clamp(44px, 6vw, 84px) clamp(20px, 5vw, 40px) clamp(24px, 3vw, 40px);">
+    <div data-reveal="1">
+      <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(30px, 4.2vw, 48px); letter-spacing: -0.045em; line-height: 1.02;">Selected work</h2>
+      <p style="margin: 12px 0 0; max-width: 56ch; font-size: 16px; line-height: 1.6; color: var(--ak-mute);">Products I designed and then shipped — dashboards, alarm governance, and the system that holds them together.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 32px;">
+      <article data-reveal="1" style="position: relative; overflow: hidden; padding: clamp(24px, 3vw, 38px); background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 26px; box-shadow: var(--ak-shadow); transition: box-shadow .35s ease, transform .35s ease, border-color .35s ease;" class="h15">
+        <div style="position: absolute; top: -80px; right: -60px; width: 300px; height: 300px; border-radius: 999px; background: var(--ak-violet-soft); filter: blur(50px); pointer-events: none;"></div>
+        <div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(20px, 3vw, 44px);">
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-family: var(--font-heading); font-weight: 600; font-size: 13px; letter-spacing: 0.14em; color: var(--ak-violet);">01</span>
+              <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ak-faint);">DevsBot — IIoT platform</span>
             </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Expertise Card 1 -->
-                <div
-                    class="glass-panel p-6 md:p-8 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(220,38,38,0.15)] hover:border-red-600/30 transition-all duration-300 reveal group">
-                    <div
-                        class="w-12 h-12 md:w-14 md:h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600/20 group-hover:border-red-600/50 transition-colors">
-                        <i data-lucide="cpu" class="w-6 h-6 md:w-7 md:h-7 text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-display font-bold text-white mb-3">IoT & Industrial Solutions
-                    </h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-2">
-                        IIoT Architecture, Smart Energy Monitoring, Cold Storage Telemetry, Solar Analytics, Sensors
-                        (Air Quality, Thermal), RS485/Modbus integration.
-                    </p>
-                </div>
-
-                <!-- Expertise Card 2 -->
-                <div class="glass-panel p-6 md:p-8 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(220,38,38,0.15)] hover:border-red-600/30 transition-all duration-300 reveal group"
-                    style="transition-delay: 100ms;">
-                    <div
-                        class="w-12 h-12 md:w-14 md:h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600/20 group-hover:border-red-600/50 transition-colors">
-                        <i data-lucide="code-2" class="w-6 h-6 md:w-7 md:h-7 text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-display font-bold text-white mb-3">Full Stack Web Dev</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-2">
-                        HTML5, CSS3, JavaScript, TypeScript, Angular, Node.js, PHP, Python (Flask). Building responsive,
-                        high-performance dashboards.
-                    </p>
-                </div>
-
-                <!-- Expertise Card 3 -->
-                <div class="glass-panel p-6 md:p-8 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(220,38,38,0.15)] hover:border-red-600/30 transition-all duration-300 reveal group"
-                    style="transition-delay: 200ms;">
-                    <div
-                        class="w-12 h-12 md:w-14 md:h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600/20 group-hover:border-red-600/50 transition-colors">
-                        <i data-lucide="cloud" class="w-6 h-6 md:w-7 md:h-7 text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-display font-bold text-white mb-3">Cloud, DevOps & Infra</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-2">
-                        Linux (Ubuntu/Debian), Docker, AWS, Apache, Nginx, Git, GitHub Actions (CI/CD), Shell scripting,
-                        Automated crons & deployments.
-                    </p>
-                </div>
-
-                <!-- Expertise Card 4 -->
-                <div
-                    class="glass-panel p-6 md:p-8 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(220,38,38,0.15)] hover:border-red-600/30 transition-all duration-300 reveal group">
-                    <div
-                        class="w-12 h-12 md:w-14 md:h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600/20 group-hover:border-red-600/50 transition-colors">
-                        <i data-lucide="layout-template" class="w-6 h-6 md:w-7 md:h-7 text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-display font-bold text-white mb-3">UI/UX & Product Design</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-2">
-                        Figma, Illustrator, Adobe XD, Canva. Crafting wireframes, prototypes, and complex dashboard
-                        architectures for industrial software.
-                    </p>
-                </div>
-
-                <!-- Expertise Card 5 -->
-                <div class="glass-panel p-6 md:p-8 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(220,38,38,0.15)] hover:border-red-600/30 transition-all duration-300 reveal group"
-                    style="transition-delay: 100ms;">
-                    <div
-                        class="w-12 h-12 md:w-14 md:h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600/20 group-hover:border-red-600/50 transition-colors">
-                        <i data-lucide="database" class="w-6 h-6 md:w-7 md:h-7 text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-display font-bold text-white mb-3">Data Architecture</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-2">
-                        MySQL (RDBMS), MongoDB. Schema Design, Query Optimization, System Architecture Diagrams, and
-                        real-time data pipelines.
-                    </p>
-                </div>
-
-                <!-- Expertise Card 6 -->
-                <div class="glass-panel p-6 md:p-8 rounded-2xl hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(220,38,38,0.15)] hover:border-red-600/30 transition-all duration-300 reveal group"
-                    style="transition-delay: 200ms;">
-                    <div
-                        class="w-12 h-12 md:w-14 md:h-14 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600/20 group-hover:border-red-600/50 transition-colors">
-                        <i data-lucide="trending-up" class="w-6 h-6 md:w-7 md:h-7 text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg md:text-xl font-display font-bold text-white mb-3">Marketing & Digital Growth
-                    </h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-2">
-                        SEO, LinkedIn Content Strategy, Product Positioning, Newsletter Authorship, B2B Campaign Design,
-                        Expo Demo Orchestration.
-                    </p>
-                </div>
+            <h3 style="margin: 16px 0 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(24px, 3vw, 36px); line-height: 1.06; letter-spacing: -0.04em;">Raw industrial telemetry, turned into decisions an operator can make in seconds.</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px;">
+              <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Angular</span>
+              <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">TypeScript</span>
+              <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">WebSockets</span>
+              <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Chart.js</span>
+              <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Docker</span>
+              <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">AWS EC2</span>
             </div>
-
-            <!-- Tech Stack Pills -->
-            <div class="mt-16 text-center reveal">
-                <p class="text-sm font-medium text-zinc-500 mb-6 tracking-widest uppercase">Technologies & Tools</p>
-                <div class="flex flex-wrap justify-center gap-2 md:gap-3">
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">Angular</span>
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">Node.js</span>
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">TypeScript</span>
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">Docker</span>
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">GitHub
-                        Actions</span>
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">Linux/WSL</span>
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">AWS</span>
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">MySQL
-                        / MongoDB</span>
-                    <span
-                        class="px-3 md:px-4 py-1.5 md:py-2 bg-zinc-900 border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] transition-all cursor-default rounded-full text-xs md:text-sm text-zinc-300">Figma</span>
-                </div>
+            <div style="margin-top: 20px; font-size: 13px; color: var(--ak-faint);">Product Designer & Front-end · 2023 — 2026</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; gap: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px; color: var(--ak-violet);"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg>
+              <div>
+                <div style="font-size: 14.5px; font-weight: 600;">Design, end to end</div>
+                <div style="font-size: 14px; line-height: 1.6; color: var(--ak-mute); margin-top: 4px;">Monitoring, configuration and alerting flows; wireframes and prototypes reviewed with operations users; a grid dashboard system that stays legible at high data density.</div>
+              </div>
             </div>
+            <div style="display: flex; gap: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px; color: var(--ak-violet);"><path d="M3 3v18h18"></path><path d="M7 16v-5"></path><path d="M12 16V7"></path><path d="M17 16v-3"></path></svg>
+              <div>
+                <div style="font-size: 14.5px; font-weight: 600;">Real-time analytics</div>
+                <div style="font-size: 14px; line-height: 1.6; color: var(--ak-mute); margin-top: 4px;">Live energy and performance views over WebSockets, with drill-down from fleet overview to a single device's history.</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px; color: var(--ak-violet);"><rect x="2" y="10" width="20" height="10" rx="2"></rect><path d="M7 10V6a5 5 0 0 1 10 0v4"></path></svg>
+              <div>
+                <div style="font-size: 14.5px; font-weight: 600;">Shipped & maintained</div>
+                <div style="font-size: 14px; line-height: 1.6; color: var(--ak-mute); margin-top: 4px;">Containerised on AWS EC2 and on-premise Linux, managed over SSH from a single codebase.</div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- Experience Timeline Section -->
-    <section id="experience" class="py-20 md:py-24 relative">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <div class="mb-12 md:mb-16 reveal">
-                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Professional Experience</h2>
-                <div class="w-20 h-1 bg-red-600 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.6)]"></div>
-            </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+        <article data-reveal="1" style="position: relative; overflow: hidden; padding: clamp(22px, 2.6vw, 32px); background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 26px; box-shadow: var(--ak-shadow); transition: box-shadow .35s ease, transform .35s ease, border-color .35s ease;" class="h16">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: var(--font-heading); font-weight: 600; font-size: 13px; letter-spacing: 0.14em; color: var(--ak-violet);">02</span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ak-faint);">Argus — alarm governance</span>
+          </div>
+          <h3 style="margin: 16px 0 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.12; letter-spacing: -0.035em;">Designed around the operator's alarm flood, not the feature list.</h3>
+          <p style="margin: 14px 0 0; font-size: 14.5px; line-height: 1.65; color: var(--ak-mute);">Priority models, acknowledgement flows and shift-handover views that let a small team triage thousands of BMS alarms without losing the critical one.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px;">
+            <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">UX flows</span>
+            <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Prototyping</span>
+            <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">PrimeNG</span>
+          </div>
+        </article>
 
-            <div class="space-y-8 md:space-y-12">
-                <!-- Experience Item 1 -->
-                <div class="relative pl-6 md:pl-0 reveal">
-                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
-                        <!-- Timeline dots & line for desktop -->
-                        <div class="hidden md:flex flex-col items-end col-span-1 pt-2 relative">
-                            <span class="text-zinc-400 font-medium text-sm text-right block w-full">Apr 2023 -
-                                Present</span>
-                            <span class="text-red-500 text-xs font-semibold uppercase tracking-wider mt-1">Chennai,
-                                India</span>
-                            <div
-                                class="absolute right-[-2.5rem] top-3 w-4 h-4 rounded-full bg-red-600 shadow-[0_0_10px_rgba(220,38,38,0.8)] z-10 border-2 border-black">
-                            </div>
-                            <!-- Vertical Line -->
-                            <div class="absolute right-[-2.1rem] top-7 bottom-[-8rem] w-0.5 bg-zinc-800"></div>
-                        </div>
+        <article data-reveal="1" style="position: relative; overflow: hidden; padding: clamp(22px, 2.6vw, 32px); background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 26px; box-shadow: var(--ak-shadow); transition: box-shadow .35s ease, transform .35s ease, border-color .35s ease;" class="h17">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: var(--font-heading); font-weight: 600; font-size: 13px; letter-spacing: 0.14em; color: var(--ak-violet);">03</span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ak-faint);">Enterprise design system</span>
+          </div>
+          <h3 style="margin: 16px 0 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.12; letter-spacing: -0.035em;">One system in Figma and in code, so no module starts from a blank canvas.</h3>
+          <p style="margin: 14px 0 0; font-size: 14.5px; line-height: 1.65; color: var(--ak-mute);">Components, layout rules and interaction patterns that standardised dashboard, device-management and analytics views — and cut the design work at the front of every new module.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px;">
+            <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Figma</span>
+            <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Component library</span>
+            <span style="padding: 6px 12px; background: var(--ak-chip); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">SCSS</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-                        <!-- Mobile Timeline dot -->
-                        <div
-                            class="md:hidden absolute left-0 top-2 w-3 h-3 rounded-full bg-red-600 shadow-[0_0_10px_rgba(220,38,38,0.8)] z-10">
-                        </div>
-                        <div class="md:hidden absolute left-[5px] top-5 bottom-[-2rem] w-0.5 bg-zinc-800"></div>
+  <section id="platforms" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: clamp(28px, 4vw, 52px) clamp(20px, 5vw, 40px);">
+    <div data-reveal="1" style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 14px;">
+      <div>
+        <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(30px, 4.2vw, 48px); letter-spacing: -0.045em; line-height: 1.02;">Websites I've built</h2>
+        <p style="margin: 12px 0 0; max-width: 54ch; font-size: 16px; line-height: 1.6; color: var(--ak-mute);">Live sites I designed, built, deployed and maintained — company sites first, then product pages and client work.</p>
+      </div>
+      <span style="display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">
+        <span style="width: 7px; height: 7px; border-radius: 999px; background: var(--ak-violet);"></span>
+        11+ live
+      </span>
+    </div>
 
-                        <div
-                            class="md:col-span-4 glass-panel p-5 md:p-8 rounded-2xl hover:border-red-600/30 hover:shadow-[0_10px_30px_rgba(220,38,38,0.1)] transition-all duration-300">
-                            <h3 class="text-xl md:text-2xl font-display font-bold text-white">Full Stack Engineer /
-                                UI/UX Developer</h3>
-                            <div
-                                class="text-red-500 font-medium mb-1 flex items-center gap-2 mt-1 text-sm md:text-base">
-                                <i data-lucide="building-2" class="w-4 h-4"></i> NiralTek Solutions
-                            </div>
-                            <div class="md:hidden text-zinc-400 text-xs md:text-sm mb-4">Apr 2023 - Present | Chennai,
-                                TN</div>
-
-                            <ul class="mt-4 md:mt-6 space-y-3 text-zinc-300 text-sm leading-relaxed">
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check" class="w-4 h-4 text-red-500 mt-1 flex-shrink-0"></i>
-                                    <span><strong>IoT & Industrial Solutions:</strong> Built and deployed scalable
-                                        platforms for Smart Energy Monitoring, Cold Storage, Solar Analytics, and Air
-                                        Quality systems.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check" class="w-4 h-4 text-red-500 mt-1 flex-shrink-0"></i>
-                                    <span><strong>CX-Driven Design & Web Dev:</strong> Designed intuitive UI/UX,
-                                        wireframes, and shipped customer-facing, responsive web interfaces aligned with
-                                        core product goals.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check" class="w-4 h-4 text-red-500 mt-1 flex-shrink-0"></i>
-                                    <span><strong>Application Delivery (DevOps):</strong> Deployed workloads on cloud
-                                        and on-premise environments using Docker, VMs, and automated CI/CD pipelines via
-                                        GitHub Actions.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check" class="w-4 h-4 text-red-500 mt-1 flex-shrink-0"></i>
-                                    <span><strong>Cross-Functional Leadership:</strong> Jumped seamlessly across
-                                        development, design, marketing (SEO, campaigns), and operations to unblock
-                                        progress and deliver real value.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience Item 2 -->
-                <div class="relative pl-6 md:pl-0 reveal">
-                    <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
-                        <!-- Timeline -->
-                        <div class="hidden md:flex flex-col items-end col-span-1 pt-2 relative">
-                            <span class="text-zinc-400 font-medium text-sm text-right block w-full">Jun 2022 - Jan
-                                2023</span>
-                            <div
-                                class="absolute right-[-2.5rem] top-3 w-4 h-4 rounded-full bg-zinc-600 border-2 border-black z-10">
-                            </div>
-                        </div>
-
-                        <!-- Mobile Timeline -->
-                        <div class="md:hidden absolute left-0 top-2 w-3 h-3 rounded-full bg-zinc-600 z-10"></div>
-
-                        <div
-                            class="md:col-span-4 glass-panel p-5 md:p-8 rounded-2xl border border-zinc-800/50 hover:border-red-600/20 hover:shadow-[0_10px_30px_rgba(220,38,38,0.05)] transition-all duration-300">
-                            <h3 class="text-lg md:text-xl font-display font-bold text-white">Document Specialist</h3>
-                            <div
-                                class="text-zinc-400 font-medium mb-1 mt-1 flex items-center gap-2 text-sm md:text-base">
-                                <i data-lucide="building" class="w-4 h-4"></i> RR Donnelley (Boston Consulting Group)
-                            </div>
-                            <div class="md:hidden text-zinc-500 text-xs md:text-sm mb-4">Jun 2022 - Jan 2023</div>
-
-                            <ul class="mt-4 space-y-2 text-zinc-400 text-sm leading-relaxed">
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="chevron-right"
-                                        class="w-4 h-4 mt-0.5 flex-shrink-0 text-red-500"></i>
-                                    <span>Created corporate PPT decks and technical documentation for global
-                                        clients.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="chevron-right"
-                                        class="w-4 h-4 mt-0.5 flex-shrink-0 text-red-500"></i>
-                                    <span>Specialized in business reports, sales decks, and marketing presentations,
-                                        ensuring clarity and high impact.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <a href="https://energy.devsbot.com" target="_blank" data-reveal="1" style="position: relative; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); align-items: center; gap: 20px 32px; margin-top: 28px; padding: clamp(24px, 3vw, 34px); background: var(--ak-violet); color: #fff; border-radius: 26px; box-shadow: var(--ak-shadow); transition: transform .3s ease, box-shadow .3s ease;" class="h18">
+      <div style="position: absolute; top: -120px; right: -60px; width: 340px; height: 340px; border-radius: 999px; background: rgba(255,255,255,0.16); filter: blur(50px); pointer-events: none;"></div>
+      <div style="position: relative;">
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background: rgba(255,255,255,0.18); border-radius: 999px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">
+          <span style="width: 6px; height: 6px; border-radius: 999px; background: #fff; animation: blip 2.4s ease-in-out infinite;"></span>
+          Main application
+        </span>
+        <div style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(26px, 3.4vw, 40px); letter-spacing: -0.042em; line-height: 1.04; margin-top: 16px;">energy.devsbot.com</div>
+        <div style="display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 13.5px; font-weight: 600;">
+          Open the live app
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
         </div>
-    </section>
-
-    <!-- Projects / Case Studies Section -->
-    <section id="projects" class="py-20 md:py-24 bg-zinc-950 border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16 reveal">
-                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Architecture & Case Studies</h2>
-                <p class="text-zinc-400 max-w-2xl mx-auto text-sm md:text-base">Real-world problems solved through
-                    scalable code, smart integrations, and user-centric design.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-6 md:gap-8">
-                <!-- Project 1 -->
-                <div
-                    class="glass-panel rounded-2xl overflow-hidden flex flex-col group reveal border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)] transition-all duration-300">
-                    <div class="h-2 bg-gradient-to-r from-red-700 to-red-500"></div>
-                    <div class="p-6 md:p-8 flex-1 flex flex-col">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl md:text-2xl font-display font-bold text-white">DevsBot – IIoT Platform
-                            </h3>
-                            <span
-                                class="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-red-500 group-hover:scale-110 transition-transform"><i
-                                    data-lucide="activity" class="w-5 h-5"></i></span>
-                        </div>
-                        <p class="text-zinc-300 text-sm mb-6 flex-1">
-                            An end-to-end IIoT platform for real-time energy monitoring and Building Management Systems
-                            (BMS).
-                        </p>
-
-                        <div class="space-y-4 text-sm mb-6">
-                            <div>
-                                <strong class="text-zinc-100 block mb-1">Problem:</strong>
-                                <span class="text-zinc-400">Industries lacked a centralized, low-latency system for
-                                    real-time energy control across multi-device setups.</span>
-                            </div>
-                            <div>
-                                <strong class="text-zinc-100 block mb-1">My Role & Solution:</strong>
-                                <span class="text-zinc-400">Architected responsive dashboards, integrated
-                                    auth/APIs/WebSockets for live telemetry, and owned deployment automation (Docker,
-                                    CI/CD).</span>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-zinc-800">
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">Angular</span>
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">Node.js</span>
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">WebSockets</span>
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">Docker</span>
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">CI/CD</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="glass-panel rounded-2xl overflow-hidden flex flex-col group reveal border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)] transition-all duration-300"
-                    style="transition-delay: 100ms;">
-                    <div class="h-2 bg-gradient-to-r from-red-600 to-orange-600"></div>
-                    <div class="p-6 md:p-8 flex-1 flex flex-col">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl md:text-2xl font-display font-bold text-white">Industrial Monitoring</h3>
-                            <span
-                                class="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-orange-500 group-hover:scale-110 transition-transform"><i
-                                    data-lucide="thermometer-snowflake" class="w-5 h-5"></i></span>
-                        </div>
-                        <p class="text-zinc-300 text-sm mb-6 flex-1">
-                            Smart Energy & Cold Storage telemetry networks for precise environmental tracking.
-                        </p>
-
-                        <div class="space-y-4 text-sm mb-6">
-                            <div>
-                                <strong class="text-zinc-100 block mb-1">Problem:</strong>
-                                <span class="text-zinc-400">Lack of visibility into real-time power consumption and
-                                    temperature-sensitive environments caused operational inefficiencies.</span>
-                            </div>
-                            <div>
-                                <strong class="text-zinc-100 block mb-1">My Role & Solution:</strong>
-                                <span class="text-zinc-400">Led full-stack development, UI/UX optimization for complex
-                                    industrial data visualization, and implemented real-time alert integration
-                                    systems.</span>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-zinc-800">
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-orange-400 rounded">TypeScript</span>
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-orange-400 rounded">IoT
-                                Telemetry</span>
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-orange-400 rounded">MySQL</span>
-                            <span
-                                class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-orange-400 rounded">Dashboards</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project : Digital Ecosystems & Live Portals -->
-                <div
-                    class="glass-panel rounded-2xl overflow-hidden flex flex-col group reveal border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)] transition-all duration-300 lg:col-span-2">
-                    <div class="h-2 bg-gradient-to-r from-red-800 to-red-600"></div>
-                    <div class="p-6 md:p-8 flex flex-col lg:flex-row gap-8">
-                        <div class="flex-1">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-xl md:text-2xl font-display font-bold text-white">Digital Ecosystems &
-                                    Web Portals</h3>
-                                <span
-                                    class="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-red-500 lg:hidden group-hover:scale-110 transition-transform"><i
-                                        data-lucide="globe-2" class="w-5 h-5"></i></span>
-                            </div>
-                            <p class="text-zinc-300 text-sm mb-6">
-                                End-to-end development, optimization, and scaling of global web presence and
-                                high-performance product platforms.
-                            </p>
-
-                            <div class="space-y-4 text-sm mb-6">
-                                <div>
-                                    <strong class="text-zinc-100 block mb-1">Impact & Role:</strong>
-                                    <span class="text-zinc-400">Successfully scaled digital footprints internationally.
-                                        Built robust product landing pages, handled Linux/WSL hosting, implemented
-                                        GitHub Actions for CI/CD, and managed automated backups.</span>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-zinc-800">
-                                <span
-                                    class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">WordPress</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">PHP
-                                    / Node.js</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">Linux
-                                    / Nginx</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">CI/CD</span>
-                            </div>
-                        </div>
-
-                        <!-- Web Portals Interactive Grid -->
-                        <div
-                            class="flex-1 bg-zinc-900/50 rounded-xl border border-zinc-800/50 p-6 relative overflow-hidden flex flex-col mt-6 lg:mt-0">
-                            <!-- Abstract Graphic -->
-                            <div
-                                class="absolute -right-12 -top-12 opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none">
-                                <i data-lucide="globe" class="w-48 h-48 text-red-500"></i>
-                            </div>
-
-                            <h4 class="text-white font-medium mb-4 flex items-center gap-2 relative z-10">
-                                <i data-lucide="external-link" class="w-4 h-4 text-red-500"></i> Live Platforms Handled
-                            </h4>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 relative z-10">
-                                <!-- niraltek.com -->
-                                <a href="https://niraltek.com" target="_blank" rel="noopener noreferrer"
-                                    class="flex items-center gap-2 p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-red-600 hover:bg-red-600/10 transition-all text-sm text-zinc-300 hover:text-white group/link">
-                                    <i data-lucide="layout"
-                                        class="w-4 h-4 text-zinc-500 group-hover/link:text-red-400"></i>
-                                    <span class="truncate">niraltek.com</span>
-                                </a>
-                                <!-- devsbot.com -->
-                                <a href="https://devsbot.com" target="_blank" rel="noopener noreferrer"
-                                    class="flex items-center gap-2 p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-red-600 hover:bg-red-600/10 transition-all text-sm text-zinc-300 hover:text-white group/link">
-                                    <i data-lucide="activity"
-                                        class="w-4 h-4 text-zinc-500 group-hover/link:text-red-400"></i>
-                                    <span class="truncate">devsbot.com</span>
-                                </a>
-                                <!-- niraltek.nl -->
-                                <a href="https://niraltek.nl" target="_blank" rel="noopener noreferrer"
-                                    class="flex items-center gap-2 p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-red-600 hover:bg-red-600/10 transition-all text-sm text-zinc-300 hover:text-white group/link">
-                                    <i data-lucide="globe-2"
-                                        class="w-4 h-4 text-zinc-500 group-hover/link:text-red-400"></i>
-                                    <span class="truncate">niraltek.nl</span>
-                                </a>
-                                <!-- ntscloudcontrol.com -->
-                                <a href="https://ntscloudcontrol.com" target="_blank" rel="noopener noreferrer"
-                                    class="flex items-center gap-2 p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-red-600 hover:bg-red-600/10 transition-all text-sm text-zinc-300 hover:text-white group/link">
-                                    <i data-lucide="cloud"
-                                        class="w-4 h-4 text-zinc-500 group-hover/link:text-red-400"></i>
-                                    <span class="truncate">ntscloudcontrol.com</span>
-                                </a>
-                                <!-- thelaststopbackpackershostel.com -->
-                                <a href="https://thelaststopbackpackershostel.com" target="_blank"
-                                    rel="noopener noreferrer" title="thelaststopbackpackershostel.com"
-                                    class="flex items-center gap-2 p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-red-600 hover:bg-red-600/10 transition-all text-sm text-zinc-300 hover:text-white group/link">
-                                    <i data-lucide="map-pin"
-                                        class="w-4 h-4 text-zinc-500 group-hover/link:text-red-400"></i>
-                                    <span class="truncate">thelaststopbackpa...</span>
-                                </a>
-                                <!-- anilbrothers.com -->
-                                <!-- <a href="https://anilbrothers.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-red-600 hover:bg-red-600/10 transition-all text-sm text-zinc-300 hover:text-white group/link">
-                                    <i data-lucide="shopping-bag" class="w-4 h-4 text-zinc-500 group-hover/link:text-red-400"></i>
-                                    <span class="truncate">anilbrothers.com</span>
-                                </a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Content, Media & Digital Storytelling -->
-                <div
-                    class="glass-panel rounded-2xl overflow-hidden flex flex-col group reveal border border-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)] transition-all duration-300 lg:col-span-2">
-                    <div class="h-2 bg-gradient-to-r from-red-800 to-red-600"></div>
-                    <div class="p-6 md:p-8 flex flex-col lg:flex-row gap-8">
-                        <div class="flex-1">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-xl md:text-2xl font-display font-bold text-white">Content creation,
-                                    Media & Digital Storytelling</h3>
-                                <span
-                                    class="p-2 bg-zinc-900 border border-zinc-800 rounded-lg text-red-500 lg:hidden group-hover:scale-110 transition-transform"><i
-                                        data-lucide="globe-2" class="w-5 h-5"></i></span>
-                            </div>
-                            <p class="text-zinc-300 text-sm mb-6">
-                                Blending technology with storytelling to simplify complex ideas and build engaging
-                                digital presence across platforms.
-                            </p>
-
-                            <div class="space-y-4 text-sm mb-6">
-                                <div>
-                                    <strong class="text-zinc-100 block mb-1">Impact & Role:</strong>
-                                    <span class="text-zinc-400">Successfully scaled digital footprints internationally.
-                                        Built robust product landing pages, handled Linux/WSL hosting, implemented
-                                        GitHub Actions for CI/CD, and managed automated backups.</span>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-zinc-800">
-                                <span
-                                    class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">WordPress</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">PHP
-                                    / Node.js</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">Linux
-                                    / Nginx</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-zinc-900 border border-zinc-800 text-red-400 rounded">CI/CD</span>
-                            </div>
-                        </div>
-
-                        <!-- Web Portals Interactive Grid -->
-                        <div
-                            class="flex-1 bg-zinc-900/50 rounded-xl border border-zinc-800/50 p-6 relative overflow-hidden flex flex-col mt-6 lg:mt-0">
-                            <!-- Abstract Graphic -->
-                            <div
-                                class="absolute -right-12 -top-12 opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none">
-                                <i data-lucide="camera" class="w-48 h-48 text-red-500"></i>
-                            </div>
-
-                            <h4 class="text-white font-medium mb-4 flex items-center gap-2 relative z-10">
-                                <i data-lucide="external-link" class="w-4 h-4 text-red-500"></i> Creative Interests:
-                            </h4>
-
-                            <div class="content-point">
-                             <p>
-                                    <li>Blog Writing & Technical Articles</li>
-                                    <li>Content Strategy & Storytelling</li>
-                                    <li>Visual Design & Media Editing</li>
-                                    <li>Meme Creation & Digital Engagement</li>
-                                    <li>Continuous experimentation with creative formats and trends</li>
-                                </p>
-                            </div>
-                            <br>
-                                    <a href="https://www.niraltek.com/blog/author/arunkarthik/" target="_blank" class="blog-btn-link"> Blog link</a>
-                           
-                          
-   
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 relative z-10">
-                                <!-- niraltek.com -->
-                                
-                              
-
-                              
-                               
-
-
-
-                                <!-- thelaststopbackpackershostel.com -->
-                                <!-- <a href="https://thelaststopbackpackershostel.com" target="_blank"
-                                    rel="noopener noreferrer" title="thelaststopbackpackershostel.com"
-                                    class="flex items-center gap-2 p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-red-600 hover:bg-red-600/10 transition-all text-sm text-zinc-300 hover:text-white group/link">
-                                    <i data-lucide="map-pin"
-                                        class="w-4 h-4 text-zinc-500 group-hover/link:text-red-400"></i>
-                                    <span class="truncate">thelaststopbackpa...</span>
-                                </a> -->
-
-                                <button></button>
-
-                                <!-- anilbrothers.com -->
-                                <!-- <a href="https://anilbrothers.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-red-600 hover:bg-red-600/10 transition-all text-sm text-zinc-300 hover:text-white group/link">
-                                    <i data-lucide="shopping-bag" class="w-4 h-4 text-zinc-500 group-hover/link:text-red-400"></i>
-                                    <span class="truncate">anilbrothers.com</span>
-                                </a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div style="position: relative; display: flex; flex-direction: column; gap: 12px;">
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; opacity: .88;">The production IIoT smart-energy application I designed and built end to end — real-time monitoring, device configuration, alerting and energy analytics, in daily use by operations teams.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+          <span style="padding: 6px 12px; background: rgba(255,255,255,0.16); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Angular</span>
+          <span style="padding: 6px 12px; background: rgba(255,255,255,0.16); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">WebSockets</span>
+          <span style="padding: 6px 12px; background: rgba(255,255,255,0.16); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Chart.js</span>
+          <span style="padding: 6px 12px; background: rgba(255,255,255,0.16); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">Docker</span>
+          <span style="padding: 6px 12px; background: rgba(255,255,255,0.16); border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap;">AWS EC2</span>
         </div>
-    </section>
+      </div>
+    </a>
 
-    <!-- Call to Action / Contact -->
-    <section id="contact" class="pt-20 md:pt-24 pb-12 relative overflow-hidden border-t border-zinc-800">
-        <!-- Background accents -->
-        <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-full max-h-lg bg-red-700/10 rounded-full blur-[100px] -z-10">
+    <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ak-faint); margin: 30px 0 14px;">Main websites</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(238px, 1fr)); gap: 14px;">
+      <a href="https://niraltek.com" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 12px; padding: 22px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h19">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; letter-spacing: -0.035em;">niraltek.com</span>
+        <span style="font-size: 13.5px; line-height: 1.55; opacity: .72;">Corporate platform — navigation architecture, page templates, product and solution pages, SEO structure.</span>
+      </a>
+      <a href="https://devsbot.com" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 12px; padding: 22px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h20">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"></rect><path d="M12 8V4"></path><circle cx="9" cy="14" r="1"></circle><circle cx="15" cy="14" r="1"></circle></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; letter-spacing: -0.035em;">devsbot.com</span>
+        <span style="font-size: 13.5px; line-height: 1.55; opacity: .72;">The IIoT platform's product site — positioning, feature architecture and conversion path.</span>
+      </a>
+      <a href="https://niraltek.nl" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 12px; padding: 22px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h21">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; letter-spacing: -0.035em;">niraltek.nl</span>
+        <span style="font-size: 13.5px; line-height: 1.55; opacity: .72;">Netherlands regional platform — same system, localised content and market-specific messaging.</span>
+      </a>
+      <a href="https://ntscloudcontrol.com" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 12px; padding: 22px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h22">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.6-1.6A4 4 0 0 0 6.5 19z"></path><path d="M12 13v4"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; letter-spacing: -0.035em;">ntscloudcontrol.com</span>
+        <span style="font-size: 13.5px; line-height: 1.55; opacity: .72;">Cloud control application surface — dashboard UI, device control views and deployment upkeep.</span>
+      </a>
+    </div>
+
+    <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ak-faint); margin: 30px 0 14px;">Client & earlier work</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(238px, 1fr)); gap: 14px;">
+      <a href="https://anilbrothers.com/" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h23">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M10 21v-6h4v6"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: -0.03em;">anilbrothers.com</span>
+        <span style="font-size: 13px; line-height: 1.55; opacity: .72;">Business site for Anil Brothers — structure, responsive build and content handover.</span>
+      </a>
+      <a href="https://thearunkarthik.github.io/lsbp/" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h24">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><rect x="4" y="6" width="16" height="15" rx="3"></rect><path d="M9 21v-4h6v4"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: -0.03em;">The Last Stop Backpackers</span>
+        <span style="font-size: 13px; line-height: 1.55; opacity: .72;">Hostel brand site — hand-coded HTML, CSS and JavaScript, mobile-first.</span>
+      </a>
+      <a href="https://niraltek.com/industrial-iot-platform" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h25">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: -0.03em;">Industrial IoT Platform</span>
+        <span style="font-size: 13px; line-height: 1.55; opacity: .72;">Long-form product page — feature architecture, diagrams and conversion path.</span>
+      </a>
+      <a href="https://niraltek.com/bms-alarm-system" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h26">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10 21a2 2 0 0 0 4 0"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: -0.03em;">BMS Alarm System</span>
+        <span style="font-size: 13px; line-height: 1.55; opacity: .72;">Alarm-management page structured around the operator's problem, not the feature list.</span>
+      </a>
+      <a href="https://niraltek.com/smart-energy-management" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h27">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: -0.03em;">Smart Energy Management</span>
+        <span style="font-size: 13px; line-height: 1.55; opacity: .72;">Monitor, analyse, reduce — a solution page built to rank and to convert.</span>
+      </a>
+      <a href="https://niraltek.com/pcb-design-services" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h28">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M9 2v4"></path><path d="M15 2v4"></path><path d="M9 18v4"></path><path d="M15 18v4"></path><path d="M2 9h4"></path><path d="M2 15h4"></path><path d="M18 9h4"></path><path d="M18 15h4"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: -0.03em;">PCB Design Services</span>
+        <span style="font-size: 13px; line-height: 1.55; opacity: .72;">Hardware service page: schematic to prototype to assembly, for non-hardware buyers.</span>
+      </a>
+      <a href="https://niraltek.com/blog/page/4/" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h29">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"></path><path d="M18 8h2v12"></path><path d="M8 8h6"></path><path d="M8 12h6"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: -0.03em;">Niraltek Blog</span>
+        <span style="font-size: 13px; line-height: 1.55; opacity: .72;">Blog architecture, article templates and listing design — plus the writing in it.</span>
+      </a>
+      <a href="https://thearunkarthik.github.io" target="_blank" data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 22px; transition: background .3s, color .3s, transform .3s, box-shadow .3s;" class="h30">
+        <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+        </span>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: -0.03em;">thearunkarthik.github.io</span>
+        <span style="font-size: 13px; line-height: 1.55; opacity: .72;">My earlier portfolio — hand-coded and hosted on GitHub Pages.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="writing" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: clamp(28px, 4vw, 52px) clamp(20px, 5vw, 40px);">
+    <div data-reveal="1">
+      <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(30px, 4.2vw, 48px); letter-spacing: -0.045em; line-height: 1.02;">Blog Writings</h2>
+      <p style="margin: 12px 0 0; max-width: 54ch; font-size: 16px; line-height: 1.6; color: var(--ak-mute);">Published articles on IoT, AI and the operational problems behind the dashboards I design.</p>
+    </div>
+
+    <div data-reveal="1" style="margin-top: 26px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 24px; overflow: hidden;">
+      <a href="https://niraltek.com/the-future-of-industrial-safety-ai-sensors-and-real-time-alerts/" target="_blank" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 20px 24px; border-bottom: 1px solid var(--ak-line); transition: background .22s, padding-left .22s;" class="h31">
+        <span style="min-width: 92px; font-size: 12.5px; font-weight: 600; color: var(--ak-faint);">Nov 2025</span>
+        <span style="flex: 1 1 300px; font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.32; letter-spacing: -0.028em;">The Future of Industrial Safety: AI, Sensors and Real-Time Alerts</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ak-faint);"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+      </a>
+      <a href="https://niraltek.com/maintain-perfect-temperature-with-smart-cold-storage-solutions/" target="_blank" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 20px 24px; border-bottom: 1px solid var(--ak-line); transition: background .22s, padding-left .22s;" class="h32">
+        <span style="min-width: 92px; font-size: 12.5px; font-weight: 600; color: var(--ak-faint);">Nov 2025</span>
+        <span style="flex: 1 1 300px; font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.32; letter-spacing: -0.028em;">Maintain Perfect Temperature with Smart Cold Storage Solutions</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ak-faint);"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+      </a>
+      <a href="https://niraltek.com/ai-chatbots-in-smart-dashboards-your-digital-co-pilot-for-control-systems/" target="_blank" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 20px 24px; border-bottom: 1px solid var(--ak-line); transition: background .22s, padding-left .22s;" class="h33">
+        <span style="min-width: 92px; font-size: 12.5px; font-weight: 600; color: var(--ak-faint);">Oct 2025</span>
+        <span style="flex: 1 1 300px; font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.32; letter-spacing: -0.028em;">AI Chatbots in Smart Dashboards: Your Digital Co-Pilot for Control Systems</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ak-faint);"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+      </a>
+      <a href="https://niraltek.com/from-data-chaos-to-predictive-clarity-inside-the-gen-ai-fusion-pipeline/" target="_blank" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 20px 24px; border-bottom: 1px solid var(--ak-line); transition: background .22s, padding-left .22s;" class="h34">
+        <span style="min-width: 92px; font-size: 12.5px; font-weight: 600; color: var(--ak-faint);">Oct 2025</span>
+        <span style="flex: 1 1 300px; font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.32; letter-spacing: -0.028em;">From Data Chaos to Predictive Clarity: Inside the Gen AI Fusion Pipeline</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ak-faint);"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+      </a>
+      <a href="https://niraltek.com/clean-air-smart-spaces-the-role-of-iot-in-air-quality-monitoring/" target="_blank" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 20px 24px; border-bottom: 1px solid var(--ak-line); transition: background .22s, padding-left .22s;" class="h35">
+        <span style="min-width: 92px; font-size: 12.5px; font-weight: 600; color: var(--ak-faint);">Sep 2025</span>
+        <span style="flex: 1 1 300px; font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.32; letter-spacing: -0.028em;">Clean Air, Smart Spaces: The Role of IoT in Air Quality Monitoring</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ak-faint);"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+      </a>
+      <a href="https://niraltek.com/blog/page/4/" target="_blank" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 24px; font-size: 13.5px; font-weight: 600; transition: background .22s, color .22s;" class="h36">
+        All articles on the Niraltek blog
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: clamp(28px, 4vw, 52px) clamp(20px, 5vw, 40px);">
+    <div data-reveal="1">
+      <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(30px, 4.2vw, 48px); letter-spacing: -0.045em; line-height: 1.02;">About & experience</h2>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 26px;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div id="ak-exp-card" data-reveal="1" style="padding: 26px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 26px;">
+          <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ak-faint);">Experience</div>
+          <div id="ak-exp" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px 34px; margin-top: 20px;">
+            <div style="display: flex; gap: 14px;">
+              <span style="flex: none; width: 9px; height: 9px; margin-top: 7px; border-radius: 999px; background: var(--ak-violet);"></span>
+              <div>
+                <div style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 2vw, 17.5px); line-height: 1.25; letter-spacing: -0.028em; text-wrap: pretty;">UI/UX Developer — Product Design & Frontend</div>
+                <div style="font-size: 13.5px; font-weight: 600; color: var(--ak-faint); margin-top: 3px;">Niraltek Solutions Pvt Ltd · Chennai · Apr 2023 — May 2026</div>
+                <ul style="margin: 12px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.6; color: var(--ak-mute);">
+                  <li>Owned product design end to end for enterprise and IIoT web products — requirements, user flows, wireframes, prototypes, production interfaces.</li>
+                  <li>Established and maintained a reusable design system standardising dashboard, device-management and analytics views.</li>
+                  <li>Built the interfaces I designed in Angular, TypeScript, RxJS and SCSS, applying React for component-driven work.</li>
+                  <li>Delivered real-time analytics over WebSockets that turned raw telemetry into views non-technical operators could act on without training.</li>
+                  <li>Designed and shipped the company's platforms and product pages, and wrote technical articles for the engineering blog.</li>
+                  <li>Introduced AI-assisted development with structured prompt engineering, shortening prototype turnaround for the team.</li>
+                </ul>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px;">
+              <span style="flex: none; width: 9px; height: 9px; margin-top: 7px; border-radius: 999px; background: var(--ak-line-2);"></span>
+              <div>
+                <div style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 2vw, 17.5px); line-height: 1.25; letter-spacing: -0.028em; text-wrap: pretty;">Document Specialist — Visual Communication</div>
+                <div style="font-size: 13.5px; font-weight: 600; color: var(--ak-faint); margin-top: 3px;">RR Donnelley (Boston Consulting Group) · Chennai · Jun 2022 — Jan 2023</div>
+                <ul style="margin: 12px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.6; color: var(--ak-mute);">
+                  <li>Designed consulting decks, business reports and technical documents for global enterprise clients under strict brand compliance.</li>
+                  <li>Applied grid systems and typographic hierarchy to restructure dense business and financial content into clear visual narratives.</li>
+                  <li>Delivered client-ready documents under short turnarounds without losing formatting accuracy across high-volume requests.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center reveal">
-            <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-6">Ready to scale your next digital
-                product?</h2>
-            <p class="text-base md:text-xl text-zinc-400 mb-10 font-light px-4">
-                I am actively seeking new opportunities to contribute to product-driven organizations, building
-                high-performance systems in IoT, SaaS, and data-driven platforms.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
-                <a href="mailto:arunkarthik.n.dev@gmail.com"
-                    class="px-6 md:px-8 py-3.5 md:py-4 w-full sm:w-auto rounded-full bg-red-600 text-white font-semibold hover:bg-red-700 transition-all shadow-[0_0_20px_rgba(220,38,38,0.4)] flex items-center justify-center gap-2">
-                    <i data-lucide="mail" class="w-5 h-5"></i>
-                    arunkarthik.n.dev@gmail.com
-                </a>
-                <a href="tel:+918939685453"
-                    class="px-6 md:px-8 py-3.5 md:py-4 w-full sm:w-auto rounded-full glass-panel border border-zinc-700 text-white hover:bg-zinc-800 hover:border-red-600/50 hover:shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="phone" class="w-5 h-5 text-red-500"></i>
-                    +91 89396 85453
-                </a>
-            </div>
+        <div data-reveal="1" style="position: relative; overflow: hidden; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 26px; padding: 26px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 26px; transition: border-color .3s ease, box-shadow .3s ease;" class="h37">
+          <div style="position: absolute; top: -70px; right: -40px; width: 220px; height: 220px; border-radius: 999px; background: var(--ak-violet-soft); filter: blur(46px); pointer-events: none;"></div>
+          <span style="position: relative; display: inline-flex; align-items: center; justify-content: center; flex: none; width: 54px; height: 54px; border-radius: 999px; background: var(--ak-violet); color: #fff;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5z"></path><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path></svg>
+          </span>
+          <div style="position: relative; flex: 1 1 260px; min-width: 0;">
+            <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ak-faint);">Education</div>
+            <div style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(19px, 2.2vw, 24px); letter-spacing: -0.03em; margin-top: 7px;">B.Sc. Computer Science</div>
+            <div style="font-size: 14px; line-height: 1.5; color: var(--ak-mute); margin-top: 5px;">Vels Institute of Science, Technology & Advanced Studies (VISTAS), Chennai</div>
+          </div>
+          <div style="position: relative; display: flex; align-items: center; gap: 9px; padding: 9px 15px; background: var(--ak-bg); border: 1px solid var(--ak-line); border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ak-violet);"><rect x="3" y="4" width="18" height="17" rx="3"></rect><path d="M8 2v4"></path><path d="M16 2v4"></path><path d="M3 10h18"></path></svg>
+            2018 — 2021
+          </div>
         </div>
-    </section>
 
-    <!-- Final Footer Section (Icons at the end) -->
-    <footer class="py-10 border-t border-zinc-900 bg-[#000000] relative">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-center justify-center space-y-8">
-
-            <!-- Social Media Icons (Placed prominently at the end) -->
-            <div class="flex justify-center gap-5 md:gap-8">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/arun-karthik-630273229" target="_blank" aria-label="LinkedIn"
-                    class="w-12 h-12 md:w-14 md:h-14 rounded-full glass-panel border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-red-600 hover:border-red-600 hover:shadow-[0_0_20px_rgba(220,38,38,0.6)] transition-all duration-300 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                        <path fill="#ababab"
-                            d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z" />
-                    </svg>
-                    <!-- <i data-lucide="linkedin" class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform"></i> -->
-                </a>
-                <!-- GitHub -->
-                <a href="https://github.com/thearunkarthik" target="_blank" aria-label="GitHub"
-                    class="w-12 h-12 md:w-14 md:h-14 rounded-full glass-panel border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-red-600 hover:border-red-600 hover:shadow-[0_0_20px_rgba(220,38,38,0.6)] transition-all duration-300 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
-                        <path fill="#ababab"
-                            d="M12.001 2c-5.525 0-10 4.475-10 10a9.99 9.99 0 0 0 6.837 9.488c.5.087.688-.213.688-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.337 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.687c-.1-.25-.45-1.275.1-2.65c0 0 .837-.263 2.75 1.024a9.3 9.3 0 0 1 2.5-.337c.85 0 1.7.112 2.5.337c1.913-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.02 10.02 0 0 0 22 12c0-5.525-4.475-10-10-10" />
-                    </svg>
-                    <!-- <i data-lucide="github" class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform"></i> -->
-                </a>
-                <!-- Behance (Custom SVG) -->
-                <a href="https://www.behance.net/arunkarthik_12" target="_blank" aria-label="Behance"
-                    class="w-12 h-12 md:w-14 md:h-14 rounded-full glass-panel border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-red-600 hover:border-red-600 hover:shadow-[0_0_20px_rgba(220,38,38,0.6)] transition-all duration-300 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                        <path fill="#ababab"
-                            d="M10.396 11.519h-.108l.24-.132a2.33 2.33 0 0 0 1.095-1.203a3.46 3.46 0 0 0 .145-1.697a2.82 2.82 0 0 0-1.732-2.297a4.7 4.7 0 0 0-1.925-.385H2v12.354h5.582a9.5 9.5 0 0 0 1.587-.132a3.47 3.47 0 0 0 2.659-1.973a3.74 3.74 0 0 0 .3-2.406a2.7 2.7 0 0 0-1.732-2.13ZM4.9 7.959h2.406a4.7 4.7 0 0 1 1.203.156a1.035 1.035 0 0 1 .794.926a1.9 1.9 0 0 1 0 .746a1 1 0 0 1-.517.65a2.5 2.5 0 0 1-1.203.264H4.875Zm4.655 6.904a1.395 1.395 0 0 1-1.202 1.13a4.4 4.4 0 0 1-.794.085H4.875v-3.272h2.863a2.7 2.7 0 0 1 .902.156a1.31 1.31 0 0 1 .914 1.203a2.6 2.6 0 0 1 0 .698Zm12.439-.806c.012-.024.012-.048-.024-.024v-1.335a4.4 4.4 0 0 0-.41-1.769a3.73 3.73 0 0 0-1.924-1.852a5.14 5.14 0 0 0-2.947-.289a3.89 3.89 0 0 0-3.212 2.815a6.7 6.7 0 0 0-.144 3.465a3.5 3.5 0 0 0 .866 1.732a4.5 4.5 0 0 0 2.069 1.203a5.45 5.45 0 0 0 2.321.12a4 4 0 0 0 2.515-1.323a3.2 3.2 0 0 0 .71-1.203a.52.52 0 0 0 .084-.349H19.54a.12.12 0 0 0-.12.072a1.7 1.7 0 0 1-1.203.902a2.7 2.7 0 0 1-1.083 0a1.9 1.9 0 0 1-1.432-1.058a2.4 2.4 0 0 1-.204-.722v-.385Zm-6.352-1.732a5 5 0 0 1 .193-.566a1.73 1.73 0 0 1 1.576-1.082a2.3 2.3 0 0 1 1.046.144a1.78 1.78 0 0 1 1.13 1.444v.252l-3.945.036a2 2 0 0 1 0-.228m4.415-6.015h-5.004v1.444l5.004-.012Z" />
-                    </svg>
-                </a>
+        <div data-reveal="1" style="padding: 26px; background: var(--ak-card); border: 1px solid var(--ak-line); border-radius: 26px;">
+          <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ak-faint);">Capabilities</div>
+          <div id="ak-caps" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 20px;">
+            <div style="padding: 18px 18px 20px; background: var(--ak-bg); border: 1px solid var(--ak-line); border-radius: 18px; transition: background .28s ease, transform .28s ease, box-shadow .28s ease, border-color .28s ease;" class="h38">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; color: var(--ak-violet);"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg>
+                Product design
+              </div>
+              <div style="font-size: 13.5px; line-height: 1.6; color: var(--ak-mute); margin-top: 8px;">UX/UI, user flows, wireframing, prototyping, interaction design, design systems, IA, responsive & adaptive UI</div>
             </div>
-
-            <!-- Copyright -->
-            <p class="text-zinc-600 text-xs md:text-sm text-center">
-                &copy; 2026 Arun Karthik. Portfolio. <br class="sm:hidden" />
-                <span class="opacity-80">Chennai, India.</span>
-            </p>
+            <div style="padding: 18px 18px 20px; background: var(--ak-bg); border: 1px solid var(--ak-line); border-radius: 18px; transition: background .28s ease, transform .28s ease, box-shadow .28s ease, border-color .28s ease;" class="h39">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; color: var(--ak-violet);"><path d="M12 3 2 8l10 5 10-5z"></path><path d="M2 16l10 5 10-5"></path></svg>
+                Design tools
+              </div>
+              <div style="font-size: 13.5px; line-height: 1.6; color: var(--ak-mute); margin-top: 8px;">Figma, Adobe XD, Illustrator, Photoshop, Canva</div>
+            </div>
+            <div style="padding: 18px 18px 20px; background: var(--ak-bg); border: 1px solid var(--ak-line); border-radius: 18px; transition: background .28s ease, transform .28s ease, box-shadow .28s ease, border-color .28s ease;" class="h40">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; color: var(--ak-violet);"><path d="m16 18 6-6-6-6"></path><path d="M8 6 2 12l6 6"></path></svg>
+                Front end
+              </div>
+              <div style="font-size: 13.5px; line-height: 1.6; color: var(--ak-mute); margin-top: 8px;">Angular, React, RxJS, TypeScript, ES6+, SCSS, Bootstrap, PrimeNG, Flexbox & Grid, mobile-first</div>
+            </div>
+            <div style="padding: 18px 18px 20px; background: var(--ak-bg); border: 1px solid var(--ak-line); border-radius: 18px; transition: background .28s ease, transform .28s ease, box-shadow .28s ease, border-color .28s ease;" class="h41">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; color: var(--ak-violet);"><path d="M3 3v18h18"></path><path d="M7 16v-5"></path><path d="M12 16V7"></path><path d="M17 16v-3"></path></svg>
+                Data & backend
+              </div>
+              <div style="font-size: 13.5px; line-height: 1.6; color: var(--ak-mute); margin-top: 8px;">Chart.js, NgX-Charts, Node.js, Express, REST, WebSockets, MySQL, MongoDB, Postman</div>
+            </div>
+            <div style="padding: 18px 18px 20px; background: var(--ak-bg); border: 1px solid var(--ak-line); border-radius: 18px; transition: background .28s ease, transform .28s ease, box-shadow .28s ease, border-color .28s ease;" class="h42">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; color: var(--ak-violet);"><path d="M12 3l1.9 4.9L18.8 9.8l-4.9 1.9L12 16.6l-1.9-4.9L5.2 9.8l4.9-1.9z"></path><path d="M18.2 15.6l.6 2 2 .6-2 .6-.6 2-.6-2-2-.6 2-.6z"></path></svg>
+                AI delivery
+              </div>
+              <div style="font-size: 13.5px; line-height: 1.6; color: var(--ak-mute); margin-top: 8px;">Generative AI, prompt engineering, AI prototyping — Claude, Cursor, Bolt.new, Copilot</div>
+            </div>
+            <div style="padding: 18px 18px 20px; background: var(--ak-bg); border: 1px solid var(--ak-line); border-radius: 18px; transition: background .28s ease, transform .28s ease, box-shadow .28s ease, border-color .28s ease;" class="h43">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; color: var(--ak-violet);"><rect x="2" y="10" width="20" height="10" rx="2"></rect><path d="M7 10V6a5 5 0 0 1 10 0v4"></path></svg>
+                CMS & DevOps
+              </div>
+              <div style="font-size: 13.5px; line-height: 1.6; color: var(--ak-mute); margin-top: 8px;">WordPress, Elementor, SEO markup, Docker, AWS EC2, Nginx, Linux, Git, CI/CD</div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+  <section id="contact" style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: clamp(28px, 4vw, 52px) clamp(20px, 5vw, 40px) clamp(40px, 6vw, 72px);">
+    <div data-reveal="1" style="position: relative; overflow: hidden; padding: clamp(32px, 5vw, 66px) clamp(24px, 4vw, 56px); background: #17161b; color: #f4f3f1; border-radius: 32px;">
+      <div style="position: absolute; top: -140px; left: -80px; width: 460px; height: 460px; border-radius: 999px; background: rgba(140,105,255,0.4); filter: blur(90px); pointer-events: none; animation: drift 17s ease-in-out infinite;"></div>
+      <div style="position: absolute; bottom: -160px; right: -60px; width: 380px; height: 380px; border-radius: 999px; background: rgba(236,48,19,0.22); filter: blur(90px); pointer-events: none; animation: drift 21s ease-in-out infinite reverse;"></div>
+      <div style="position: relative;">
+        <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: clamp(32px, 5.4vw, 62px); letter-spacing: -0.05em; line-height: 0.98;">Let's connect<span style="color: #a48bff;">.</span></h2>
+        <p style="margin: 16px 0 0; max-width: 48ch; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.6; opacity: .74;">Open to product design and design-engineering roles — remote, hybrid or Chennai-based. Reach out and I'll reply the same day.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
+          <a href="mailto:arunkarthik.n.dev@gmail.com" data-magnet="1" style="display: inline-flex; align-items: center; gap: 9px; padding: 14px 22px; border-radius: 999px; background: #a48bff; color: #17161b; font-size: 14px; font-weight: 600; transition: filter .2s;" class="h44">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            arunkarthik.n.dev@gmail.com
+          </a>
+          <a href="tel:+918939685453" data-magnet="1" style="display: inline-flex; align-items: center; gap: 9px; padding: 14px 22px; border-radius: 999px; border: 1px solid rgba(244,243,241,0.3); color: #f4f3f1; font-size: 14px; font-weight: 600; transition: background .2s, border-color .2s;" class="h45">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2.1z"></path></svg>
+            +91 89396 85453
+          </a>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; padding-top: 26px; border-top: 1px solid rgba(244,243,241,0.16);">
+          <a href="https://linkedin.com/in/arunkarthik12" target="_blank" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 999px; border: 1px solid rgba(244,243,241,0.26); color: #f4f3f1; transition: background .2s, color .2s;" class="h46">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12" rx="1"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://github.com/thearunkarthik" target="_blank" aria-label="GitHub" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 999px; border: 1px solid rgba(244,243,241,0.26); color: #f4f3f1; transition: background .2s, color .2s;" class="h47">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+          </a>
+          <a href="https://behance.net/arunkarthik12" target="_blank" aria-label="Behance" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 999px; border: 1px solid rgba(244,243,241,0.26); color: #f4f3f1; transition: background .2s, color .2s;" class="h48">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h6a3.2 3.2 0 0 1 0 6.4H2z"></path><path d="M2 11.4h6.6a3.3 3.3 0 0 1 0 6.6H2z"></path><path d="M15 14.5h7a3.5 3.5 0 1 0-7 0c0 2 1.5 3.5 3.5 3.5 1.4 0 2.4-.6 3-1.5"></path><path d="M16 6.5h5"></path></svg>
+          </a>
+          <a href="doc/ArunkarthikProductDesignerCV.pdf" download="ArunkarthikProductDesignerCV.pdf" ="_blank" style="display: inline-flex; align-items: center; gap: 9px; padding: 0 20px; height: 46px; border-radius: 999px; border: 1px solid rgba(244,243,241,0.26); color: #f4f3f1; font-size: 13.5px; font-weight: 600; transition: background .2s, color .2s;" class="h49">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
+            Résumé
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; margin-top: 22px; font-size: 12.5px; color: var(--ak-faint);">
+      <span>© 2026 Arun Karthik N — Product Designer & Front-end Engineer, Chennai</span>
+      <a href="#top" style="display: inline-flex; align-items: center; gap: 7px; color: var(--ak-faint);">
+        Back to top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg>
+      </a>
+    </div>
+  </section>
+</div>
 
 </body>
-
 </html>
